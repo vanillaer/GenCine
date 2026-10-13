@@ -1,20 +1,59 @@
----
-purpose: "Project setup, checkpoint layout, and inference commands for gencine."
-parent_docs: []
-child_docs:
-  - path: "examples/README.md"
-    role: "Provided examples and encoded input format."
----
+<h1 align="center">Generative Cinematographer</h1>
+<h3 align="center">Composing Camera and Object Motion in 3D</h3>
 
-# Generative Cinematographer
+<p align="center">
+  <a href="https://vanillaer.github.io/">Jiahan Zhang</a> ·
+  <a href="https://louiscroix.github.io/">Chaohao Yang</a> ·
+  <a href="https://nam1410.github.io/">Namitha Guruprasad</a> ·
+  <a href="https://github.com/vivekjyotibanerjee">Vivekjyoti Banerjee</a><br>
+  <a href="https://nttung1110.github.io/">Trong-Tung Nguyen</a> ·
+  <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a> ·
+  <a href="https://anandbhattad.github.io/">Anand Bhattad</a><br>
+  Johns Hopkins University
+</p>
 
-**Composing Camera and Object Motion in 3D**
+<p align="center">
+  <a href="https://generative-cinematographer.github.io/"><img src="https://img.shields.io/badge/Project-Website-2563eb?style=flat-square" alt="Project website"></a>
+  <a href="https://arxiv.org/abs/2610.02180"><img src="https://img.shields.io/badge/arXiv-2610.02180-b31b1b?style=flat-square" alt="Paper on arXiv"></a>
+  <a href="https://huggingface.co/zonszer/Gencine_ckpts"><img src="https://img.shields.io/badge/Hugging_Face-Checkpoints-f5c542?style=flat-square" alt="Download checkpoints"></a>
+</p>
 
-[Project website](https://generative-cinematographer.github.io/) · [Paper](https://arxiv.org/abs/2610.02180) · [Checkpoints](https://huggingface.co/zonszer/Gencine_ckpts)
+**From a single image to a composed shot.** Author camera paths and object motion
+together in 3D, then use a video diffusion model to generate the shot.
 
-gencine generates videos from preprocessed image, text, and geometry conditioning.
-The default output is 21 frames at 832×480, using the provided checkpoint.
-Inference runs offline.
+<p align="center">
+  <a href="https://generative-cinematographer.github.io/#heroPreview">
+    <img src="assets/teaser.gif" width="1128" alt="Animated bus and hiking examples: input image, authored camera and object motion in 3D, and generated video">
+  </a>
+</p>
+
+<p align="center">
+  Input image → authored 3D controls → generated video.<br>
+  <a href="https://generative-cinematographer.github.io/#overview">Watch the overview</a> ·
+  <a href="https://generative-cinematographer.github.io/#heroPreview">Explore the interactive demos</a>
+</p>
+
+This repository provides **offline inference with preprocessed inputs**.
+The included examples generate **21 frames at 832×480** using the provided
+checkpoint. The demos above show authored motions from the project website;
+the bundled examples use their provided trajectories.
+
+[Environment](#environment) · [Download weights](#provided-checkpoint) ·
+[Run inference](#run-inference) · [Examples](examples/README.md) · [Citation](#citation)
+
+## Method overview
+
+<p align="center">
+  <a href="https://generative-cinematographer.github.io/#method">
+    <img src="assets/framework.png" width="1100" alt="Framework: lift an image into 3D, author camera and object motion, encode correspondence maps, and condition video diffusion">
+  </a>
+</p>
+
+The full method lifts an image into a 3D scene, represents camera and object
+motion with correspondence maps, and conditions video generation on those maps.
+This release runs the inference stage using prepared image, text, and geometry
+conditioning. See the [project website](https://generative-cinematographer.github.io/#method)
+for the authoring workflow.
 
 ## Environment
 
@@ -122,8 +161,7 @@ Each run saves:
 - `run.json`: effective settings, hashes, environment, timing, and peak GPU memory.
 - `imported_modules.json`: imported package paths.
 
-All examples are estimated the 3d annotation with CoWTracker/ViPE
-trajectories.
+The provided examples use 3D annotations estimated with CoWTracker/ViPE.
 
 The runtime contains model loading, denoising, and RGB decoding. New examples
 need precomputed inputs; preprocessing and training are outside this package.
