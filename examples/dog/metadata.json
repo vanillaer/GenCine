@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "example_id": "dog",
+  "variant": 0,
+  "prompt": "A dog is exploring a grassy area.",
+  "negative_prompt": "",
+  "weight_bundle": "gencine",
+  "inputs": "inputs.safetensors",
+  "inputs_sha256": "74cc091607295e884e7e7453cd6236d27605e234144ecfc11f112e6515a1fe43",
+  "tensors": {
+    "context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "negative_context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "reference_latents": {
+      "shape": [
+        1,
+        16,
+        1,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "clip_feature": {
+      "shape": [
+        1,
+        257,
+        1280
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "vace_context": {
+      "shape": [
+        1,
+        60,
+        6,
+        30,
+        52
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "y": {
+      "shape": [
+        1,
+        32,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "scale_cond": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    "initial_noise": {
+      "shape": [
+        1,
+        16,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  },
+  "settings": {
+    "num_inference_steps": 50,
+    "sigma_shift": 5.0,
+    "denoising_strength": 1.0,
+    "cfg_scale": 3.0,
+    "vace_scale": 1.0,
+    "seed": 0,
+    "rand_device": "cuda",
+    "num_frames": 21,
+    "height": 480,
+    "width": 832,
+    "fps": 5,
+    "quality": 5,
+    "tiled": false
+  },
+  "dataset": "DAVIS",
+  "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "trajectory_origin": "CoWTracker tracks lifted with ViPE depth and cameras; estimated reference-video trajectories",
+  "auxiliary_files": {
+    "reference_tracks.npz": {
+      "sha256": "0c6ff898dff6533afb75da14a08b7b3404db058fe58f6ac6662e1bd1ff3c082e",
+      "bytes": 9401232
+    },
+    "ground_truth.mp4": {
+      "sha256": "3a5f93d6c36eb11326f7800f4d8bf928ce6e0c03238824df3b64bf4431139825",
+      "bytes": 466245
+    },
+    "reference.png": {
+      "sha256": "df22599452421d7e1c6ac7a11b887a8613f73c19d07a413b7932d5ad38176960",
+      "bytes": 423859
+    },
+    "trajectory_overlay.mp4": {
+      "sha256": "19cd9f35f0a6f4cb2302fceb3b511ebf8ecf702b467ccecc83ef35d3db608601",
+      "bytes": 477039
+    }
+  },
+  "kernel_count": 3,
+  "selected_track_count": 2912
+}

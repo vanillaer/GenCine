@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "example_id": "cows",
+  "variant": 0,
+  "prompt": "A cow walks along a dirt path in a grassy field.",
+  "negative_prompt": "",
+  "weight_bundle": "gencine",
+  "inputs": "inputs.safetensors",
+  "inputs_sha256": "3bb2b4e40ac4248bfadb1c1381fb3a19b80dcfc4c14f6da338bea20dd2fa2011",
+  "tensors": {
+    "context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "negative_context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "reference_latents": {
+      "shape": [
+        1,
+        16,
+        1,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "clip_feature": {
+      "shape": [
+        1,
+        257,
+        1280
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "vace_context": {
+      "shape": [
+        1,
+        60,
+        6,
+        30,
+        52
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "y": {
+      "shape": [
+        1,
+        32,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "scale_cond": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    "initial_noise": {
+      "shape": [
+        1,
+        16,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  },
+  "settings": {
+    "num_inference_steps": 50,
+    "sigma_shift": 5.0,
+    "denoising_strength": 1.0,
+    "cfg_scale": 3.0,
+    "vace_scale": 1.0,
+    "seed": 0,
+    "rand_device": "cuda",
+    "num_frames": 21,
+    "height": 480,
+    "width": 832,
+    "fps": 5,
+    "quality": 5,
+    "tiled": false
+  },
+  "dataset": "DAVIS",
+  "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "trajectory_origin": "CoWTracker tracks lifted with ViPE depth and cameras; estimated reference-video trajectories",
+  "auxiliary_files": {
+    "reference_tracks.npz": {
+      "sha256": "b5d63238ad104225a1fedb44e6e5c708738b6349658eb6f53951bd0c3373faf3",
+      "bytes": 17843263
+    },
+    "ground_truth.mp4": {
+      "sha256": "8e81286f6332c27cce54b510032020a81211b2515afb6e2fcddb6912523168fb",
+      "bytes": 362404
+    },
+    "reference.png": {
+      "sha256": "23f8ed88056acd8d7843df1036f820b998440745e6509cf1a6e5eed5c514e676",
+      "bytes": 697185
+    },
+    "trajectory_overlay.mp4": {
+      "sha256": "cd3654e7a1299c8718afd9c325f082c105f3625192c22612d7a5220e5bfb4a2d",
+      "bytes": 369144
+    }
+  },
+  "kernel_count": 1,
+  "selected_track_count": 672
+}

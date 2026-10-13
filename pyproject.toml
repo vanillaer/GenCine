@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gencine"
+version = "0.1.0"
+description = "gencine video inference"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+  "torch==2.8.0", "einops==0.8.2", "safetensors==0.8.0", "numpy==2.4.6",
+  "Pillow==12.2.0", "tqdm==4.68.2", "imageio==2.37.3", "imageio-ffmpeg==0.6.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

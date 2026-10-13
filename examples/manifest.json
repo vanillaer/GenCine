@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "weight_bundle": "gencine",
+  "examples": {
+    "kitchen": {
+      "metadata": "kitchen/metadata.json",
+      "metadata_sha256": "4799c7d4d86499678aa1abfe8a442ae966af13756831d75f6cef7f19d9636456"
+    },
+    "hike": {
+      "metadata": "hike/metadata.json",
+      "metadata_sha256": "6b31ecce477768e02ca2ee07f2f7b883c3e843f6aa7eb97bdbdddfc1ff1fa243"
+    },
+    "bus": {
+      "metadata": "bus/metadata.json",
+      "metadata_sha256": "5612c80d76691c3100983da1ac078a67f87ec7164dbf1087f7373798b8c15a8b"
+    },
+    "bear": {
+      "metadata": "bear/metadata.json",
+      "metadata_sha256": "8ed07a7bb40ab913deeefec23e2adfed7dd0e8d8b2ff311cbae22e8c5f202788"
+    },
+    "rhino": {
+      "metadata": "rhino/metadata.json",
+      "metadata_sha256": "4fe9f0cbb8496984ef581403a959c58ffa45c2abe6c80080d1620d96000ce71b"
+    },
+    "cows": {
+      "metadata": "cows/metadata.json",
+      "metadata_sha256": "adda0ec3861c0e3112b8198d284bfbb00065fbbeb0ae47aca9ff95d536b0cb46"
+    },
+    "camel": {
+      "metadata": "camel/metadata.json",
+      "metadata_sha256": "f73c311e473b7abfee5164705921dfb045addc8b2d2ca94c9046181802d2bfa0"
+    },
+    "dog": {
+      "metadata": "dog/metadata.json",
+      "metadata_sha256": "72803dde0f9cad3b51b87d1a0def22b369c007f6a291454defc8d1d3e468187f"
+    }
+  }
+}

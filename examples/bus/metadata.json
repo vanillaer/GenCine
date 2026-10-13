@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "example_id": "bus",
+  "variant": 0,
+  "prompt": "A city bus navigates through an urban street.",
+  "negative_prompt": "",
+  "weight_bundle": "gencine",
+  "inputs": "inputs.safetensors",
+  "inputs_sha256": "74a78893dbb2f2e25c3016fa2cbd0afdff27feb72e3d3978c5ee07d40056710e",
+  "tensors": {
+    "context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "negative_context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "reference_latents": {
+      "shape": [
+        1,
+        16,
+        1,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "clip_feature": {
+      "shape": [
+        1,
+        257,
+        1280
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "vace_context": {
+      "shape": [
+        1,
+        60,
+        6,
+        30,
+        52
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "y": {
+      "shape": [
+        1,
+        32,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "scale_cond": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    "initial_noise": {
+      "shape": [
+        1,
+        16,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  },
+  "settings": {
+    "num_inference_steps": 50,
+    "sigma_shift": 5.0,
+    "denoising_strength": 1.0,
+    "cfg_scale": 3.0,
+    "vace_scale": 1.0,
+    "seed": 0,
+    "rand_device": "cuda",
+    "num_frames": 21,
+    "height": 480,
+    "width": 832,
+    "fps": 5,
+    "quality": 5,
+    "tiled": false
+  },
+  "dataset": "DAVIS",
+  "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "trajectory_origin": "CoWTracker tracks lifted with ViPE depth and cameras; estimated reference-video trajectories",
+  "auxiliary_files": {
+    "reference_tracks.npz": {
+      "sha256": "5bcdeb15edc703b9d3b52b460294a9e27ef74e6a9aafc4aabf0725b0edd142f1",
+      "bytes": 15218838
+    },
+    "ground_truth.mp4": {
+      "sha256": "ca5b17131d47e22ea207cba1b2ca4910f0da17f25bd42a45219bd4fbdaf0d509",
+      "bytes": 230960
+    },
+    "reference.png": {
+      "sha256": "e0edbd22d35b7bf087b64268bb8bd5e55aa2d0c822d0d244425d309c7d9b5de1",
+      "bytes": 439911
+    },
+    "trajectory_overlay.mp4": {
+      "sha256": "3ed0613f12742c5328839dab47d72d6829d715df11fce7189c8443063b1f7964",
+      "bytes": 240178
+    }
+  },
+  "kernel_count": 1,
+  "selected_track_count": 513
+}

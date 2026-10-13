@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "example_id": "kitchen",
+  "variant": 0,
+  "prompt": "A kitchen features a woman gesturing near a brightly lit refrigerator, set against a backdrop of a cabinet and soft ambient lighting.",
+  "negative_prompt": "",
+  "weight_bundle": "gencine",
+  "inputs": "inputs.safetensors",
+  "inputs_sha256": "674f9141985e6488a2b6a4f9c9e13341de16474d243954ba82ca80ae45e531c4",
+  "tensors": {
+    "context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "negative_context": {
+      "shape": [
+        1,
+        512,
+        4096
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "reference_latents": {
+      "shape": [
+        1,
+        16,
+        1,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "clip_feature": {
+      "shape": [
+        1,
+        257,
+        1280
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "vace_context": {
+      "shape": [
+        1,
+        60,
+        6,
+        30,
+        52
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "y": {
+      "shape": [
+        1,
+        32,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "scale_cond": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "torch.float32"
+    },
+    "initial_noise": {
+      "shape": [
+        1,
+        16,
+        6,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  },
+  "settings": {
+    "num_inference_steps": 50,
+    "sigma_shift": 5.0,
+    "denoising_strength": 1.0,
+    "cfg_scale": 3.0,
+    "vace_scale": 1.0,
+    "seed": 0,
+    "rand_device": "cuda",
+    "num_frames": 21,
+    "height": 480,
+    "width": 832,
+    "fps": 5,
+    "quality": 5,
+    "tiled": false
+  },
+  "dataset": "SpatialVID-HQ",
+  "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "trajectory_origin": "CoWTracker tracks lifted with ViPE depth and cameras; estimated reference-video trajectories",
+  "auxiliary_files": {
+    "reference_tracks.npz": {
+      "sha256": "b67483519378dac74a832ae843e1d31a345ae808ca9f2071f5c49ad347d6f1a9",
+      "bytes": 14003876
+    },
+    "ground_truth.mp4": {
+      "sha256": "54ad1c9daf85150723569139965a25d447355735419c5c8e47d174465c48239c",
+      "bytes": 155500
+    },
+    "reference.png": {
+      "sha256": "ee4b94819c3361dcc13e078c05dee278aeed4814ac9186044304efb3fee0aaf5",
+      "bytes": 300029
+    },
+    "trajectory_overlay.mp4": {
+      "sha256": "2062ace07c3d8503277e58bdf186bede5de2060b8cdecf3d400e389e94585663",
+      "bytes": 162271
+    }
+  },
+  "kernel_count": 2,
+  "selected_track_count": 2067
+}
